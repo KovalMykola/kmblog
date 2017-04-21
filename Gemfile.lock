@@ -147,6 +147,8 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.6)
+    trix (0.10.1)
+      rails
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -174,7 +176,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  mini_magick
+  mini_magick (~> 4.5, >= 4.5.1)
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.1)
@@ -183,6 +185,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  trix
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

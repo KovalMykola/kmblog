@@ -42,7 +42,9 @@ source 'https://rails-assets.org' do
 end
 
 gem 'carrierwave', '~> 1.0'
-gem 'mini_magick'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'trix'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
