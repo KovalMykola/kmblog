@@ -28,7 +28,11 @@
               <a class="nav-link" href="#">Контакти</a>
             </li>
           </ul>
-          <%=  link_to 'Нова стаття', new_post_path, class: 'btn btn-outline-primary pull-xs-right'%>  
+
+          <ul class="navbar-nav pull-xs-right">
+            <li><%=  link_to 'Нова стаття', new_post_path, class: 'btn btn-outline-primary pull-xs-right'%>
+            </li>
+          </ul>  
 
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
