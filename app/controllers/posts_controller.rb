@@ -1,11 +1,11 @@
-class PostsController < ApplicationController
-	
+ class PostsController < ApplicationController
+
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
-	
+
 	def index
 		@posts = Post.all
 	end
-	
+
 	def show
 	end
 
@@ -27,11 +27,11 @@ class PostsController < ApplicationController
 
 	def update
 		if @post.update_attributes(post_params)
-			redirect_to @post, success: 'Стаття успішно обновлена'			
+			redirect_to @post, success: 'Стаття успішно обновлена'
 		else
-		 	render :edit, danger: 'Стаття не обновлена'	
-		end 	
-	end 
+		 	render :edit, danger: 'Стаття не обновлена'
+		end
+	end
 
 	def destroy
 		@post.destroy
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 	end
 
 	def post_params
-		params.require(:post).permit(:title, :summary, :body, :image)
+		params.require(:post).permit(:title, :summary, :body, :image, :all_tags)
 	end
 
 end

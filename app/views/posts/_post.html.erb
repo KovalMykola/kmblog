@@ -14,5 +14,9 @@
 		<%= image_tag post.image.url(:thumb), class: 'img-thumblnail thumb' if post.image? %>
 		<%= post.summary %>
 	</section>
+
+	<section class="footer-summary">
+		<%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-info'}.join(' ') %>
+	</section>
 </article>
- 
+

@@ -1,5 +1,5 @@
 ua:
-  common: 
+  common:
     errors: 'При заповненні форми такі помилки'
     back: 'Назад'
   posts:
@@ -8,7 +8,7 @@ ua:
     new:
       title: 'Нова стаття'
     edit:
-      title: 'Редагування статті'   
+      title: 'Редагування статті'
     form:
       submit:
         '%{action} статтю'

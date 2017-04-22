@@ -32,7 +32,7 @@
           <ul class="navbar-nav pull-xs-right">
             <li><%=  link_to 'Нова стаття', new_post_path, class: 'btn btn-outline-primary pull-xs-right'%>
             </li>
-          </ul>  
+          </ul>
 
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -41,7 +41,7 @@
         </div>
       </nav>
     </div>
-    
+
     <div class="container main">
       <div class="row">
         <div class="col-md-12">
@@ -51,10 +51,19 @@
             </div>
           <% end%>
         </div>
-
       </div>
 
-      <%= yield %>
+      <div class="row">
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+        <div class="col-md-3">
+          <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
+              <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+          <%end%>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
