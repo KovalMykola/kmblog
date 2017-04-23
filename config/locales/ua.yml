@@ -2,6 +2,9 @@ ua:
   common:
     errors: 'При заповненні форми такі помилки'
     back: 'Назад'
+  will_paginate:
+    previous_label: '&larr; Попередня'
+    next_label: 'Наступна &rarr;'
   posts:
     index:
       title: 'Статті'

@@ -44,6 +44,7 @@ end
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'trix'
+gem 'will_paginate', '~> 3.1.0'
 
 
 group :development, :test do
