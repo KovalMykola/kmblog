@@ -4,13 +4,15 @@
 		<small>
 			<time><%= @post.created_at.to_date.strftime("%d %B, %Y")%></time>
 			<% if @post.category.present? %>
-			|
+				|
 				<%= link_to @post.category.name, @post.category %>
-			<%end%>
-			|
-			<%= link_to "Змінити", edit_post_path(@post) %>
-			|
-			<%= link_to "Видалити", post_path(@post), method: :delete, data:{ confirm: 'Ви хочите видалити статтю?' } %>
+			<% end %>
+			<% if user_signed_in? %>
+				|
+				<%= link_to "Змінити", edit_post_path(@post) %>
+				|
+				<%= link_to "Видалити", post_path(@post), method: :delete, data:{ confirm: 'Ви хочите видалити статтю?' } %>
+			<% end %>
 		</small>
 	</section>
 

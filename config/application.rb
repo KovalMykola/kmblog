@@ -11,8 +11,8 @@ module Kmblog
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    
-    config.i18n.available_locales = [:ua, :en]
-    config.i18n.default_locale = :ua
+
+    config.i18n.available_locales = [:uk, :en]
+    config.i18n.default_locale = :uk
   end
 end

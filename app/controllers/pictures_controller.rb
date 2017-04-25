@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
-	def create
+	before_action :authenticate_user!
+  def create
     @picture = Picture.new(image_params)
     @picture.save
     respond_to do |format|
@@ -20,5 +21,5 @@ class PicturesController < ApplicationController
   def image_params
     params.require(:picture).permit(:image)
   end
-	
+
 end
