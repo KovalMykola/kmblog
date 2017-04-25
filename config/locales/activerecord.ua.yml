@@ -7,6 +7,7 @@ ua:
         title: 'Назва'
         summary: 'Коротка стаття'
         body: 'Текст статті'
+        category_id: 'Категорія'
         all_tags: 'Теги'
       category:
         name: 'Назва'

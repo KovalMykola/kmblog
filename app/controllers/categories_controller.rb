@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path, success: 'Категория успешно создана'
+      redirect_to categories_path, success: 'Категорія успішно створена'
     else
       @categories = Category.all.order(:name)
       flash[:danger] = 'Категория не создана'
@@ -31,17 +31,17 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update_attributes(category_params)
-      redirect_to categories_path, success: 'Категория успешно обновлена'
+      redirect_to categories_path, success: 'Категорія успішно обновлена'
     else
       @categories = Category.where("id != #{@category.id}").order(:name)
-      flash[:danger] = 'Категория не обновлена'
+      flash[:danger] = 'Категорія не обновлена'
       render :edit
     end
   end
 
   def destroy
     @category.destroy
-    redirect_to categories_path, success: 'Категория успешно удалена'
+    redirect_to categories_path, success: 'Категорія успішно видалена'
   end
 
   private
