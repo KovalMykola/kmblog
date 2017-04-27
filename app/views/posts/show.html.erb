@@ -7,11 +7,11 @@
 				|
 				<%= link_to @post.category.name, @post.category %>
 			<% end %>
-			<% if user_signed_in? %>
+			<% if user_signed_in? && current_user.admin? %>
 				|
-				<%= link_to "Змінити", edit_post_path(@post) %>
+				<%= link_to "Змінити", edit_admin_post_path(@post) %>
 				|
-				<%= link_to "Видалити", post_path(@post), method: :delete, data:{ confirm: 'Ви хочите видалити статтю?' } %>
+				<%= link_to "Видалити", admin_post_path(@post), method: :delete, data:{ confirm: 'Ви хочите видалити статтю?' } %>
 			<% end %>
 		</small>
 	</section>

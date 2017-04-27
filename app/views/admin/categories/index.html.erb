@@ -1,7 +1,7 @@
 <h1> <%= t('.title') %></h1>
 
 <div class="buttons_panel">
-  <%= link_to 'Нова категорія', new_category_path, class: 'btn btn-outline-primary btn-sm' %>
+  <%= link_to 'Нова категорія', new_admin_category_path, class: 'btn btn-outline-primary btn-sm' %>
 </div>
 
 <section id="categories">
@@ -19,8 +19,8 @@
           <td><%= index + 1 %></td>
           <td><%= category.name %></td>
           <td>
-            <%= link_to 'Змінити', edit_category_path(category), class: 'btn btn-outline-primary btn-sm'%>
-            <%= link_to 'Видалити', category_path(category), method: :delete, data: { confirm: 'Ви впевнені, що хочите видалити категорію? '}, class: 'btn btn-outline-danger btn-sm' %>
+            <%= link_to 'Змінити', edit_admin_category_path(category), class: 'btn btn-outline-primary btn-sm'%>
+            <%= link_to 'Видалити', admin_category_path(category), method: :delete, data: { confirm: 'Ви впевнені, що хочите видалити категорію? '}, class: 'btn btn-outline-danger btn-sm' %>
           </td>
         </tr>
       <% end %>
