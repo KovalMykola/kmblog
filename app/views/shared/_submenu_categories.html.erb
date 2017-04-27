@@ -1,0 +1,10 @@
+<div class="submenu">
+  <ul class="subnav nav-pills nav-stacked nested_nav">
+    <h2>Категорії</h2>
+    <% Category.order(:name).each do |category| %>
+      <li class="nav-item <%= 'active' if current_page?(category_path(category)) %>">
+      <%= link_to category.name, category, class: 'nav-link' %>
+    </li>
+  <% end %>
+  </ul>
+</div>
