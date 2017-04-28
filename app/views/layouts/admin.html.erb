@@ -48,8 +48,13 @@
                 <%= link_to "Реєстрація", new_user_registration_path, class: "nav-link" %>
               </li>
               <% end %>
+              <li class="nav-item<% " active" if I18n.locale == :uk %>">
+                <%=	 link_to "Укр", { locale: :uk }, class: "nav-link" %>
+              </li>
+              <li class="nav-item<% " active" if I18n.locale == :en %>">
+                <%=	 link_to "En", { locale: :en }, class: "nav-link" %>
+              </li>
           </ul>
-
 
         </div>
       </nav>

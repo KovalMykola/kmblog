@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:show]
 
     namespace :admin do
-      resources :posts,except: [:show, :index]
+      resources :posts, except: [:show, :index]
       resources :categories, except: [:show]
       resources :pictures, only: [:create, :destroy]
     end

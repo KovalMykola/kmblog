@@ -18,7 +18,7 @@
 
 
   <div class="form-group">
-    <%= f.submit t('.submit', action: @category.new_record? ? 'Створити' : 'Редагувати'), class: 'btn btn-primary' %>
+    <%= f.submit t('.submit', action: @category.new_record? ? t('common.create') : t('common.edit')), class: 'btn btn-primary' %>
     <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary'  %>
   </div>
 <% end %>

@@ -2,6 +2,8 @@ uk:
   common:
     errors: 'При заповненні форми такі помилки'
     back: 'Назад'
+    create: 'Створити'
+    edit: 'Редагувати'
   will_paginate:
     previous_label: '&larr; Попередня'
     next_label: 'Наступна &rarr;'
