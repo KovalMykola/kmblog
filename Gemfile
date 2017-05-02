@@ -14,7 +14,6 @@ gem 'rails', '~> 5.0.1'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 group :assets do
-  gem 'bootstrap', '~> 4.0.0.alpha6'
   gem 'sass-rails', '~> 5.0'
   # Use Uglifier as compressor for JavaScript assets
   gem 'uglifier', '>= 1.3.0'
@@ -38,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'pg', '~> 0.18'
-# gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
