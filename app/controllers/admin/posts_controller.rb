@@ -1,5 +1,5 @@
  class Admin::PostsController < Admin::AdminController
-	before_action :set_post, only: [ :edit, :update, :destroy]
+	before_action :set_post, only: [:edit, :update, :destroy]
 
 	def new
 		@post = Post.new
@@ -8,7 +8,7 @@
 	def create
 		@post = Post.new(post_params)
 		if @post.save
-			redirect_to @post ,success: 'Стаття успішно створена'
+			redirect_to @post, success: 'Стаття успішно створена'
 		else
 			flash.now[:danger] = 'Стаття не створена'
 			render :new
