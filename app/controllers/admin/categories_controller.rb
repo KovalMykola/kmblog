@@ -16,7 +16,7 @@ class Admin::CategoriesController < Admin::AdminController
       redirect_to admin_categories_path, success: 'Категорія успішно створена'
     else
       @categories = Category.all.order(:name)
-      flash[:danger] = 'Категория не создана'
+      flash[:danger] = 'Категорія не створена'
       render :new
     end
   end

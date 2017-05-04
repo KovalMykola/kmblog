@@ -13,7 +13,7 @@ uk:
         reset_password_token: "Посилання на скидання пароля"
         unlock_token: "Токен розблокування"
     models:
-      user: "Користувач"
+      user: "Користувача"
   devise:
     confirmations:
       confirmed: "Ваш обліковий запис підтверджено. Ви увійшли в систему."
