@@ -8,17 +8,21 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
+  host: localhost
+  port: 5433
+  username: postgres
+  password: admin12
 
 development:
   <<: *default
   user:
   password:
-  port: 5432
+  port: 5433
   database: kmblog_dev
 
 production:
   <<: *default
   user:
   password:
-  port: 5432
+  port: 5433
   database: kmblog_prod
